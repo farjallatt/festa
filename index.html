@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PÓS-TROTE INSANO! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF00FF; /* Neon Pink */
+            --secondary-color: #00FFFF; /* Aqua */
+            --background-dark: #1a1a2e; /* Dark Blue/Purple */
+            --text-light: #e0e0e0;
+            --text-dark: #333;
+            --accent-glow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color);
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            text-shadow: var(--accent-glow);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--secondary-color);
+            margin-top: 30px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .hero-section {
+            background: linear-gradient(45deg, var(--background-dark), #3a1c71);
+            padding: 40px 20px;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .countdown {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em;
+            color: var(--secondary-color);
+            margin-top: 20px;
+            text-shadow: var(--accent-glow);
+        }
+
+        .countdown span {
+            display: block;
+            font-size: 0.6em;
+            color: var(--text-light);
+            text-shadow: none;
+        }
+
+        .map-section img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--background-dark);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.05);
+            color: var(--background-dark);
+            box-shadow: var(--accent-glow);
+        }
+        
+        .btn.map-btn {
+            background-color: var(--secondary-color);
+            color: var(--background-dark);
+        }
+
+        .btn.map-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        .lineup-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+        }
+
+        .lineup-item:last-child {
+            border-bottom: none;
+        }
+
+        .lineup-item span {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .lineup-item .artist-name {
+            font-size: 1.1em;
+            color: var(--secondary-color);
+        }
+
+        .lineup-item .social-link {
+            background-color: #C13584; /* Instagram gradient start */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .lineup-item .social-link:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9, #5851db, #405de6); /* Instagram gradient */
+        }
+        
+        .house-img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 3px solid var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .attention-text {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgba(255, 0, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 400px) {
+            h1 { font-size: 2em; }
+            .countdown { font-size: 1.8em; }
+            .btn { padding: 10px 20px; font-size: 0.9em; }
+            .lineup-item { flex-direction: column; align-items: flex-start; }
+            .lineup-item .social-link { margin-top: 5px; }
+        }
+
+        /* Fade-in animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero-section">
+            <h1>PÓS-TROTE INSANO! 🎉</h1>
+            <p>A festa continua na minha casa!</p>
+            <p>📍 Data: 04/08/2025</p>
+            <p>⏰ Início: 13:00</p>
+            <div class="countdown" id="countdown"></div>
+        </header>
+
+        <section class="section fade-in-section">
+            <h2>ONDE É A FARRA? 🗺️</h2>
+            <p>Rua Adolfo Maraccini, 368 – Parque das Universidades – Campinas - São Paulo, CEP 13086-010</p>
+            <img src="house.png" alt="Foto da Casa da Festa" class="house-img">
+            <p><strong>Atenção, galera do Trote!</strong></p>
+            <p>Do Poco Loco Bar até a festa é um pulo: <strong>apenas 5 minutos de caminhada!</strong></p>
+            <p>Não precisa dirigir, é só seguir o fluxo e a diversão! 🚶‍♂️</p>
+            <a href="https://www.google.com/maps/dir/Av.+Profa.+Ana+Maria+Silvestre+Adade,+255-395+-+Parque+das+Universidades,+Campinas+-+SP,+13086-130/Rua+Adolfo+Maraccini,+368+%E2%80%93+Parque+das+Universidades+%E2%80%93+Campinas+-+S%C3%A3o+Paulo,+CEP+13086-010/@-22.825225,-47.069153,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x94c8b6727284b3f3:0xb192323e9c7c22d4!2m2!1d-47.06782!2d-22.822941!1m5!1m1!1s0x94c8b671a5f6a9f1:0xaf50a583e74a6b25!2m2!1d-47.07097!2d-22.827375!3e2?entry=ttu" 
+               target="_blank" class="btn map-btn">VER TRAJETO NO GOOGLE MAPS 📍</a>
+        </section>
+
+        <section class="section fade-in-section">
+            <h2>LINE-UP INSANO! 🎶</h2>
+            <div class="lineup">
+                <div class="lineup-item">
+                    <span>13:30</span>
+                    <span class="artist-name">Yago Augusto</span>
+                    <a href="https://www.instagram.com/yagoaugustocantor/" target="_blank" class="social-link">Instagram</a>
+                </div>
+                <div class="lineup-item">
+                    <span>14:30</span>
+                    <span class="artist-name">DK e Princi</span>
+                    <div>
+                        <a href="https://www.instagram.com/omcdk_/" target="_blank" class="social-link">@omcdk_</a>
+                        <a href="https://www.instagram.com/dprinci7/" target="_blank" class="social-link">@dprinci7</a>
+                    </div>
+                </div>
+                <div class="lineup-item">
+                    <span>15:00</span>
+                    <span class="artist-name">L e P</span>
+                    <!-- No Instagram provided for L e P -->
+                </div>
+                <div class="lineup-item">
+                    <span>16:00</span>
+                    <span class="artist-name">Baile do DJ LZ</span>
+                    <a href="https://www.instagram.com/fe_lenzi/" target="_blank" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in-section">
+            <h2>O QUE VAI TER? 🥳</h2>
+            <ul>
+                <li>🏊‍♀️ Piscina Liberada!</li>
+                <li>🍖 Churrasco Chegando!</li>
+                <li>🍻 MUITA Bebida (traga a sua!)</li>
+                <li>🎯 Jogos Insanos (Beer Pong e mais!)</li>
+            </ul>
+        </section>
+
+        <section class="section fade-in-section">
+            <h2>AVISOS IMPORTANTES! 🚨</h2>
+            <p class="attention-text">ENTRADA FREE! Só traga sua bebida para a curtição ser completa! 😉</p>
+            <p>Vamo fazer história nessa pós-trote! #VemPraFesta</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Pós-Trote. Todos os direitos de curtição reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        const countDownDate = new Date("Aug 4, 2025 13:00:00").getTime();
+
+        // Update the count down every 1 second
+        const x = setInterval(function() {
+
+            // Get today's date and time
+            const now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown"
+            const countdownElement = document.getElementById("countdown");
+            if (distance > 0) {
+                countdownElement.innerHTML = `COMEÇA EM: <br>${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                countdownElement.innerHTML = "A FESTA JÁ COMEÇOU! VEM!";
+                clearInterval(x);
+            }
+
+        }, 1000);
+
+        // Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.fade-in-section');
+
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.1 // 10% of the section must be visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+    </script>
+</body>
+</html> 
